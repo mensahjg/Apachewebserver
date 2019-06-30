@@ -5,10 +5,12 @@
 DisplayMenu ()
 {
 	clear
-        /bin/echo -e "###################################################################"
-        /bin/echo -e "#\n# Script to install Nginx, mySQL and PHP on Ubuntu server vers 1.x #"
-        /bin/echo -e "#\n# Usage: ./installer.sh ; you will be prompted to enter domain name for the site" 
-        /bin/echo -e "#\n###################################################################"
+        /bin/echo -e "####################################################################"
+        /bin/echo -e "#                                                                  #"
+        /bin/echo -e "# Script to install Nginx, mySQL, Wordpress & PHP on Ubuntu server #"
+        /bin/echo -e "# Usage: ./installer.sh ;                                          #" 
+        /bin/echo -e "#                                                                  #"
+        /bin/echo -e "####################################################################"
 	/bin/echo -e -n "\nEnter domain name to be used for the site. e.g. (mysite.com) :>  "
 }
 
@@ -39,10 +41,6 @@ if [ -z "$hostentry" ] ; then
 fi
 
 
-
-echo "firewall status is $fw_status"
-
-
 # Create an nginx config file for the domain
 if [ -f ./sample.com ] ; then 
 	sudo cp sample.com /etc/nginx/sites-available/$domainname
@@ -60,6 +58,7 @@ if [ -f ./latest.zip ] ; then
 	sudo unzip -o ./latest.zip -d /var/www/html/ && rm -f ./latest.zip 
 fi
 
+# configure MySQL root password
 sudo mysql_secure_installation
 
 # Create new Mysql database for WordPress
@@ -89,7 +88,7 @@ sudo sed -i "s/database_name_here/$MAINDB/" /var/www/html/wordpress/wp-config.ph
 sudo sed -i "s/username_here/wpuser/" /var/www/html/wordpress/wp-config.php
 sudo sed -i "s/password_here/$PASSWD/" /var/www/html/wordpress/wp-config.php
 
-echo "Password for wordpress db user 'wpuser' can be found in /var/www/html/wordpress/wp-config.php"
+echo "Password generated for wordpress db user 'wpuser' can be found in /var/www/html/wordpress/wp-config.php"
 echo "restarting Nginx service"
 sudo systemctl reload nginx
 
