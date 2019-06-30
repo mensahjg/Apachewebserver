@@ -1,7 +1,7 @@
 # Nginxwebserver
-Setup for WordPress, Nginx web server, and PHP
+Setup for WordPress, mySQL, Nginx web server, and PHP
 
-- Any assumptions made
+- ### Any assumptions made
 
   1. Program will be run interactively by a user that has root or sudo access
   2. Firewall is assumed to be inactive
@@ -10,11 +10,11 @@ Setup for WordPress, Nginx web server, and PHP
   5. FPM/FastCGI version is /etc/php/7.2/fpm 
   6. OS is Ubuntu
 
-- Libraries you have used
+- ### Libraries you have used
 
   nginx mysql-server php-fpm php-mysql unzip
   
-- Instructions that explain how we can run/use your code.
+- ### Instructions that explain how we can run/use your code.
 1. Download installer.sh and sample.com to a directory on Ubuntu server
 2. As root or a user with sudo access, run the the installer script
       e.g. ./installer.sh
