@@ -11,6 +11,7 @@ Setup for WordPress, Nginx web server, and PHP
   6. OS is Ubuntu
 
 - Libraries you have used
+
   nginx mysql-server php-fpm php-mysql unzip
   
 - Instructions that explain how we can run/use your code.
