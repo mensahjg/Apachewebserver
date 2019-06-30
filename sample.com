@@ -29,7 +29,7 @@ server {
 	# deny access to .htaccess files, if Apache's document root
 	# concurs with nginx's one
 	#
-	location ~ /\.ht {
+	location ~ /\.ht { 
 		deny all;
 	}
 }
