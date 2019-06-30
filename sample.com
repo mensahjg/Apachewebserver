@@ -5,7 +5,7 @@ server {
 	listen 80;
 	listen [::]:80;
 
-	root /var/www/html;
+	root /var/www/html/wordpress;
 
 	index index.php index.html index.htm index.nginx-debian.html;
 
@@ -23,7 +23,7 @@ server {
 		include snippets/fastcgi-php.conf;
 	
 	 	# With php-fpm (or other unix sockets):
-	 	fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+	 	fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 	 }
 
 	# deny access to .htaccess files, if Apache's document root

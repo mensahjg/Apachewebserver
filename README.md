@@ -8,6 +8,8 @@ Web Server Setup for WordPress
   sample.com file is in the same directory as the installer script
 
 - Libraries you have used
+  FPM/FastCGI version is /etc/php/7.2/fpm 
+
 - Instructions that explain how we can run/use your code.
 
 
