@@ -19,4 +19,6 @@ Web Server Setup for WordPress
 2. As root or a user with sudo access, run the the installer script
       e.g. ./installer.sh
 3. You will be prompted to provide the domain name to be used
-
+4. You will be prompt to setup MySQL root password and secure the database
+5. A db user wpuser will be created and granted all privileges to the wordpress database
+6. A random password will be generated for the upuser. This user is stored in /var/www/html/wordpress/wp-config.php
