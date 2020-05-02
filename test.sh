@@ -93,3 +93,5 @@ echo "restarting Nginx service"
 sudo systemctl reload nginx
 
 echo -e "\nWordpress site should be available at http://${domainname}. Please open in browser."
+##############
+# New edits made in branch tb01 after master changes
