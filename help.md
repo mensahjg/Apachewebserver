@@ -52,7 +52,7 @@ git diff --staged
 git commit -m "feat: Added EC2 modules CCD-688 & CCD-691"
 [feature-ccd-688 431cd75] feat: Added EC2 modules CCD-688 & CCD-691
  5 files changed, 164 insertions(+)
- 
+
 ###
 ##To upload changes to github
 
