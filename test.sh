@@ -96,4 +96,4 @@ echo -e "\nWordpress site should be available at http://${domainname}. Please op
 ##
 # New edits made in branch tb01 after master changes
 
-Adding this third line for testing 
+Adding this third line for testing... 
